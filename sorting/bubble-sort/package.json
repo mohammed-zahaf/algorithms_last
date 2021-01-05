@@ -1,0 +1,22 @@
+{
+  "name": "zm-bubble-sort",
+  "version": "1.0.0",
+  "description": "bubble sort algorithm",
+  "main": "index.js",
+  "scripts": {
+  	"start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mohammed-zahaf"
+  },
+  "keywords": [
+    "Algorithm",
+    "BubbleAlgorithm",
+    "Bubble",
+    "Sorting"
+  ],
+  "author": "Mohammed ZAHAF",
+  "license": "MIT"
+}
