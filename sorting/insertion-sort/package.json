@@ -1,0 +1,22 @@
+{
+  "name": "zm-insertion-sort",
+  "version": "1.0.0",
+  "description": "insertion sort algorithm",
+  "main": "index.js",
+  "scripts": {
+  	"start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mohammed-zahaf"
+  },
+  "keywords": [
+    "Algorithm",
+    "InsertionSort",
+    "Insertion",
+    "Sorting"
+  ],
+  "author": "Mohammed ZAHAF",
+  "license": "MIT"
+}
