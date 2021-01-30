@@ -1,7 +1,7 @@
 {
-  "name": "zm-quick-sort",
+  "name": "zm-heap-sort",
   "version": "1.0.0",
-  "description": "quicksort algorithm",
+  "description": "heap sort algorithm",
   "main": "index.js",
   "scripts": {
   	"start": "node index.js",
@@ -13,10 +13,9 @@
   },
   "keywords": [
     "Algorithme",
-    "Quicksort",
+    "Heapsort",
     "Sorting",
-    "Quick",
-    "Fast"
+    "Heap"
   ],
   "author": "Mohammed ZAHAF",
   "license": "MIT"

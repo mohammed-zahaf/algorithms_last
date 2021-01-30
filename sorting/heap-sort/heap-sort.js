@@ -1,36 +1,40 @@
 const { swap } = require('../common');
 
 
-function partition(L, low, high, sort) {
-	// pivot - Element at right most position
-	let pivot = L[high];
-	for (let j = low; j <= high; j++)
-	{
-
-		// If current element is smaller than the pivot, swap the element with pivot
-		if (sort === 'ASC' && L[j] < pivot) {
-			swap(L, low++, j);
+function sift(L, node, size, sort) {
+	let k = node, j = 2 * k;
+	while (j <= size) {
+		let isAscending = sort === 'ASC' && L[j] < L[j+1];
+		let isDescending = sort === 'DESC' && L[j] > L[j+1];
+		if (j < size && (isAscending || isDescending)) {
+			j++;
 		}
 
-		// If current element is greater than the pivot, swap the element with pivot
-		if (sort === 'DESC' && L[j] > pivot) {
-			swap(L, low++, j);
+		isAscending = sort === 'ASC' && L[k] < L[j];
+		isDescending = sort === 'DESC' && L[k] > L[j];
+		if (isAscending || isDescending) {
+			swap(L, k, j);
+			k = j;
+			j = 2 * k;
+		} else {
+			j = size + 1;
 		}
 	}
-
-	swap(L, low, high);
-	return low;
 }
 
-function quickSort(L, low, high, sort = 'ASC') {
-	if (low < high) {
-		const P = partition(L, low, high, sort);
-		quickSort(L, low, P-1, sort);
-		quickSort(L, P+1, high, sort);
+function heapSort(L, size, sort = 'ASC') {
+	let mid = Math.floor(size/2);
+	for (let i = mid; i >= 0; i--) {
+		sift(L, i, size, sort);
+	}
+	for (let i = size; i >= 1; i--) {
+		swap(L, i, 0);
+		sift(L, 0, i-1, sort);
 	}
 	return L;
 }
 
+
 module.exports = {
-	quickSort
+	heapSort
 }
