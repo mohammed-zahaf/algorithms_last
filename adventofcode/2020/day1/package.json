@@ -1,0 +1,21 @@
+{
+  "name": "zm-adventofcode-2020-day1",
+  "version": "1.0.0",
+  "description": "Christmas challenge algorithm",
+  "main": "index.js",
+  "scripts": {
+  	"start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mohammed-zahaf"
+  },
+  "keywords": [
+    "Algorithm",
+    "Christmas",
+    "Challenge"
+  ],
+  "author": "Mohammed ZAHAF",
+  "license": "MIT"
+}
